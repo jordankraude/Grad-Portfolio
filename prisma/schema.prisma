@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model game {
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  gameAlt           String
+  gameName          String
+  gameSWFName       String
+  gameThumbnailPath String
+}
+
+model graphicDesigns {
+  id             String @id @default(auto()) @map("_id") @db.ObjectId
+  graphicAlt     String
+  graphicName    String
+  graphicSummary String
+  pdfFile        Bytes
+}
+
+model storeItem {
+  id                  String @id @default(auto()) @map("_id") @db.ObjectId
+  itemAlt             String
+  itemCost            String
+  itemImagePath       String
+  itemName            String
+  itemQuantityInStock String
+  vendorID            String
+  vendorLocation      String
+}
+
+model user {
+  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  userEmail       String
+  userLoginName   String
+  userPassword    String
+  userPhoneNumber String
+}
+
+model messages {
+  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  Name            String
+  Email           String
+  Message         String
+}

@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+header a:hover {
+  color: text-white;
+}
+
+/* Container for each design card */
+.design-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Overlay that shows the design information */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Show the PDF preview on hover */
+.design-card:hover .overlay {
+  opacity: 0;
+}
+
+.design-card:hover .pdf-preview {
+  opacity: 1;
+}
+
+/* PDF preview iframe */
+.pdf-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.hover-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: right 0.3s;
+  z-index: 0;
+}
+
+.hover-slide:hover::before {
+  right: 0;
+}
+
+.hover-slide .content {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+}
+
+.hover-slide:hover .content {
+  color: #B5D99C;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+
+@keyframes move-left {
+  0% {
+    transform: translateX(0vw); /* Start far off-screen to the left */
+  }
+  50% {
+    transform: translateX(175vw); /* Move to far off-screen to the right */
+  }
+  100% {
+    transform: translateX(0vw); /* Return to off-screen to the left */
+  }
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(175vw); /* Start far off-screen to the right */
+  }
+  50% {
+    transform: translateX(-175vw); /* Move to far off-screen to the left */
+  }
+  100% {
+    transform: translateX(175vw); /* Return to off-screen to the right */
+  }
+}
+
+.animate-lines {
+  position: absolute;
+  width: 200vw; /* Extend beyond the viewport to ensure lines start off-screen */
+  height: 100vh;
+  top: 1/4;
+  left: -50vw; /* Position off-screen to the left */
+  z-index: -1;
+  overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  width: var(--line-width, 10px); /* Default width; can be overridden */
+  height: var(--line-height, 2px); /* Default height; can be overridden */
+  background: var(--line-color, #B5D99C); /* Default color; can be overridden */
+  animation: move-left 10s linear infinite;
+  top: var(--line-top, 0); /* Default position; can be overridden */
+  z-index: 0;
+}
+
+.line:nth-child(odd) {
+  background: #333; /* Dark gray */
+  animation: move-right 20s linear infinite;
+}
+
+.line:nth-child(3n) {
+  background: #ccc; /* Light gray */
+}
+
+
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  99% {
+    background-position: 93% 0%;
+  }
+  100% {
+    background-position: 94% 0%;
+  }
+}
+
+.moving-bg {
+  background: linear-gradient(90deg, #B5D99C, #000000, #808080, #B5D99C, black);
+  background-size: 500% 100%; /* Covering double the width for seamless movement */
+  animation: moveBackground 10s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* styles/globals.css or styles/AboutSection.module.css */
+
+@keyframes floatAndFade {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: .8;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+}
+
+.logo {
+  opacity: 0;
+  animation: floatAndFade 5s infinite ease-in-out;
+}
+
+.logo-delay-0 {
+  animation-delay: 0s;
+}
+
+.logo-delay-1 {
+  animation-delay: 0.5s;
+}
+
+.logo-delay-2 {
+  animation-delay: 1s;
+}
+
+.logo-delay-3 {
+  animation-delay: 1.5s;
+}
+
+.logo-delay-4 {
+  animation-delay: 2s;
+}
+
+.logo-delay-5 {
+  animation-delay: 2.5s;
+}
+
+.logo-delay-6 {
+  animation-delay: 3s;
+}
