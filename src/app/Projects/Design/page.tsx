@@ -20,7 +20,7 @@ const DesignPage: React.FC = () => {
   useEffect(() => {
     const fetchDesigns = async () => {
       try {
-        const response = await fetch('/api/Design');
+        const response = await fetch('/api/Design/prod');
         const data = await response.json();
         setDesigns(data);
         setLoading(false);
