@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Overview
 
-## Getting Started
+This project is a web application developed to enhance my skills as a software engineer and explore various modern web technologies. The web app showcases my graphic design projects, including PDFs and other digital artworks. The primary goal is to create an engaging and interactive portfolio that dynamically displays design projects.
 
-First, run the development server:
+The web app uses Next.js for server-side rendering and Tailwind CSS for styling, ensuring a seamless and responsive user experience. The app fetches design data from a Prisma-powered database and displays it in a user-friendly gallery format.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+To start a test server on your computer:
+1. Clone the repository.
+2. Install the dependencies using `npm install`.
+3. Run the development server using `npm run dev`.
+4. Open your browser and navigate to `http://localhost:3000` to see the first page of the app.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project serves as a practical exercise to deepen my understanding of full-stack development, focusing on integrating backend services with a modern frontend framework.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[Software Demo Video](https://youtu.be/tuBfpsVy588)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# Web Pages
 
-To learn more about Next.js, take a look at the following resources:
+- **Home Page:** Features an introduction and highlights key projects.
+- **About Page:** Provides a detailed background about my professional journey and skills.
+- **Projects Page:** Displays a list of my web app projects with descriptions and links.
+- **Contact Page:** Allows users to contact me via a form, and displays incremental messages based on user inactivity.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dynamic Content:
+- **Graphic Designs Page:** Fetches design data from an API and displays it in a gallery format. Preview of designs shown on hover interaction.
+- **Web Page:** Features dynamically generated sections that display content fetched from an API.
+- **Contact Page:** Shows incremental messages based on user inactivity and success/failure message on form submit.
+- **Logo Animations:** Animations applied to logos on the About page. Random position and delay.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Every element that appears only through scrolling and reading through the application.
 
-## Deploy on Vercel
+# Development Environment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Tools**: VS Code, Git, Vercel for deployment
+- **Programming Language**: JavaScript, TypeScript, HTML, CSS
+- **Libraries**: 
+  - Next.js for server-side rendering and routing
+  - Tailwind CSS for utility-first styling
+  - Prisma for database management
+  - React for building UI components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Useful Websites
+
+* [Next.js Documentation](https://nextjs.org/docs)
+* [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+* [Prisma Documentation](https://www.prisma.io/docs)
+* [React Documentation](https://reactjs.org/docs/getting-started.html)
+* [Styled-Components Documentation](https://styled-components.com/docs)
+
+# Future Work
+
+* Improve the performance and loading speed of the Graphic Designs page by optimizing image loading and reducing the payload size.
+* Enhance the user interface with more interactive elements and animations.
+* Add more projects and categories to the portfolio to showcase a broader range of work.
+* Implement user authentication to allow visitors to create an account and save their favorite designs.
+* Refactor the codebase to improve maintainability and scalability.
