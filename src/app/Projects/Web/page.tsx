@@ -76,6 +76,12 @@ const Web: React.FC = () => {
       link: 'https://webdev-frontend-lt6r.vercel.app/',
       githubLink: 'https://github.com/jordankraude/webdev-frontend'
     },
+    {
+      title: 'Kachinga',
+      description: 'A start to try and venture on my own and fill holes in my experience, especially towards ecommerce. Help me get some groceries :)',
+      link: 'https://kachinga.vercel.app/',
+      githubLink: 'https://github.com/jordankraude/GiveMeTheMoneyPage'
+    }
   ];
 
   return (
