@@ -81,6 +81,12 @@ const Web: React.FC = () => {
       description: 'A start to try and venture on my own and fill holes in my experience, especially towards ecommerce. Help me get some groceries :)',
       link: 'https://kachinga.vercel.app/',
       githubLink: 'https://github.com/jordankraude/GiveMeTheMoneyPage'
+    },
+    {
+      title: 'ColorSphere',
+      description: 'A color palette generator that I use to find design color schemes.',
+      link: 'https://color-sphere.vercel.app/',
+      githubLink: 'https://github.com/jordankraude/ColorSphere'
     }
   ];
 
