@@ -12,7 +12,7 @@ interface Project {
 
 const ProjectSection: React.FC<{ project: Project; alignLeft: boolean }> = ({ project, alignLeft }) => {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.28,
   });
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const ProjectSection: React.FC<{ project: Project; alignLeft: boolean }> = ({ pr
   return (
     <div
       ref={ref}
-      className={`w-full h-screen flex items-center justify-center transition-opacity duration-1000 ${inView ? 'opacity-100' : 'opacity-0'}`}
+      className={`w-full h-[80vh] flex items-center justify-center transition-opacity duration-1000 ${inView ? 'opacity-100' : 'opacity-0'}`}
       style={{ backgroundColor: 'inherit' }} // Ensures the background color matches the parent
     >
       <div className="w-full max-w-7xl mx-auto p-10 flex flex-col">

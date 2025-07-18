@@ -6,8 +6,9 @@ import Footer from "../components/footer";
 import { ToastProvider } from "../components/ToastProvider" // Adjust the path to your ToastProvider file
 import "./globals.css";
 
+
 const inter = Inter({ subsets: ["latin"] });
-const montserrat = Montserrat({ weight: "200", subsets: ["latin"] });
+const montserrat = Montserrat({ weight: "300", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
