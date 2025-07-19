@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Typewriter from '../components/Typewriter';
 
 const Home: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const Home: React.FC = () => {
           transition={{ duration: 1 }}
         >
           <h1 className="text-5xl font-bold">Jordan Kraude</h1>
-          <p className="text-2xl mt-2">Web Developer & Designer</p>
+          <Typewriter />
         </motion.div>
       </section>
 

@@ -13,7 +13,7 @@ const Web: React.FC = () => {
   const projects: Project[] = [
       {
       title: 'OSSO Webpage',
-      description: 'A demo frontend webpage with tied backend analytics and management capabilities for signed in employees including responding to messages, creating new employees, writing blog posts, and more. Due to not wanting to allow everyone to access my database data through the CRUD operations, you can always set a time with me.',
+      description: 'A demo frontend webpage with tied backend analytics and management capabilities for signed in employees including responding to messages, creating new employees, writing blog posts, and more. Due to not wanting everyone to gain access to that database data, viewing that functionality is limited, however, you can always set a time with me to see it.',
       link: 'https://osso.vercel.app/',
       githubLink: 'https://github.com/jordankraude/OSSO'
       },
